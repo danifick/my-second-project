@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+ <img class="calc__logo" src="project images/logo.svg" alt="Splitter Logo">
+
+ <main class="tip__calculator">
+
+    <div class="calculator__left">
+        <label class="label__first" for="bill-input">Bill</label>
+      <div class="input__wrapper">
+        <img src="project images/icon-dollar.svg" alt="">
+        <input class="bill" type="number" id="bill-input" placeholder="0">
+      </div>
+
+
+      <h3 class="select__title">Select Tip %</h3>
+      <div class="tip__wrapper">
+        <button class="tip-btn" type="button">5%</button>
+        <button class="tip-btn" type="button">10%</button>
+        <button class="tip-btn" type="button">15%</button>
+        <button class="tip-btn" type="button">25%</button>
+        <button class="tip-btn" type="button">50%</button>
+        <input class="custom__input" type="number" placeholder="Custom">
+      </div>
+
+
+      <label class="label__second" for="people-input">Number of People</label>
+      <div class="input__wrapper2">
+        <img src="project images/icon-person.svg" alt="">
+        <input class="peoplenum" type="number" id="people-input" placeholder="0">
+      </div>
+    </div> <!-- calculator__left -->
+
+    <div class="calculator__right">
+      <div class="result__values-block">
+          
+        <div class="result__row">
+          <div class="result__label">
+            <span class="label__title">Tip Amount</span>
+            <span class="label__subtitle">/ person</span>
+          </div>
+          <div class="result__number  tip-amount-result">$0.00</div>
+        </div>
+
+
+        <div class="result__row">
+          <div class="result__label">
+            <span class="label__title">Total</span>
+            <span class="label__subtitle">/ person</span>
+          </div>
+          <div class="result__number  total-result">$0.00</div>
+        </div>
+      </div> <!-- result__values-block-->
+      <button class="btn__reset" type="button">RESET</button>
+    </div> <!-- calculator__right -->
+ </main> <!-- main -->
+
+    
+
+<script src="script.js"></script> 
+</body>
+</html>
