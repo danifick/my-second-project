@@ -28,6 +28,10 @@ if(peopleValue > 0) {
 
 tipBtn.forEach(function(btn) {
     btn.addEventListener('click', function() {
+   tipBtn.forEach(function(b) {
+    b.classList.remove("active")
+   })
+    btn.classList.add("active")
      tipValue = parseFloat(btn.textContent)
      if(peopleValue > 0) {
         Amount.textContent = `$${(billValue * tipValue / 100 / peopleValue).toFixed(2)}`
