@@ -38,3 +38,17 @@ tipBtn.forEach(function(btn) {
      }
     })
 })
+
+customInput.addEventListener ('input', function() {
+  tipBtn.forEach(function(c) {
+   c.classList.remove("active")
+  })
+  if (customInput.value === "") {
+    tipValue = 0
+  } else {
+    tipValue = parseFloat(customInput.value) / 100
+  }
+   if(peopleValue > 0) {
+        Amount.textContent = `$${(billValue * tipValue / peopleValue).toFixed(2)}`
+     }
+})
