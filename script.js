@@ -6,8 +6,8 @@ const resBtn = document.querySelector('.btn__reset')
 const Amount = document.querySelector('.tip-amount-result')
 const Total = document.querySelector('.total-result')
 
-let billValue = 0;
-let peopleValue = 0;
+let billValue = 0
+let peopleValue = 0
 let tipValue = 0
 
 
@@ -51,4 +51,17 @@ customInput.addEventListener ('input', function() {
    if(peopleValue > 0) {
         Amount.textContent = `$${(billValue * tipValue / peopleValue).toFixed(2)}`
      }
+})
+
+resBtn.addEventListener('click', function() {
+billInput.value = ""
+peopleNum.value = ""
+customInput.value = ""
+
+billValue = 0
+peopleValue = 0
+tipValue = 0
+
+Amount.textContent = "$0.00"
+Total.textContent = "$0.00"
 })
