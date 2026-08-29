@@ -120,7 +120,7 @@ body {
     font-family: inherit;
     border-radius: 5px;
     background-color: hsl(189, 47%, 97%);
-    color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
     border: none;
     outline: none;
     border: 2px solid transparent;
@@ -300,4 +300,23 @@ body {
 .tip-btn.active {
     background-color: hsl(172, 67%, 45%);
     color: hsl(183, 100%, 15%);
+}
+
+.label__row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.error-msg {
+    color: hsl(15, 60%, 54%);
+    font-size: 14px;
+    font-weight: 700;
+    display: none;
+    margin-top: 16px;
+}
+
+.input__wrapper2.error {
+     border-color: hsl(15, 60%, 54%);
 }

@@ -5,6 +5,8 @@ const tipBtn = document.querySelectorAll('.tip-btn')
 const resBtn = document.querySelector('.btn__reset')
 const Amount = document.querySelector('.tip-amount-result')
 const Total = document.querySelector('.total-result')
+const errorMsg = document.querySelector('.error-msg')
+const inputWrapper2 = document.querySelector('.input__wrapper2')
 
 let billValue = 0
 let peopleValue = 0
@@ -23,12 +25,32 @@ if (peopleValue > 0) {
 
 peopleNum.addEventListener('input', function() {
 peopleValue = Number(peopleNum.value)
+
+if(peopleValue === 0 && peopleNum.value !== "") {
+  errorMsg.style.display = 'block'
+  inputWrapper2.classList.add("error")
+
+  Amount.textContent = '$0.00'
+  Total.textContent = '$0.00'
+}
+
 if(peopleValue > 0) {
+ errorMsg.style.display = 'none'
+ inputWrapper2.classList.remove("error")
  const checkPerPerson = billValue / peopleValue
  const tipPerPerson = (billValue * tipValue / 100) / peopleValue  
  Total.textContent = `$${(checkPerPerson + tipPerPerson).toFixed(2)}`
 }
+
+
+if(peopleNum.value === "") {
+ errorMsg.style.display = 'none'
+ inputWrapper2.classList.remove("error")
+}
 })
+
+
+
 
 tipBtn.forEach(function(btn) {
     btn.addEventListener('click', function() {
@@ -94,3 +116,5 @@ if(peopleValue > 0 ) {
   Total.textContent = `$${(billValue / peopleValue).toFixed(2)}`
 }
 })
+
+
