@@ -293,8 +293,9 @@ body {
 }
 
 .tip__wrapper button:hover {
-    background-color: hsl(172, 67%, 45%);
-    color: hsl(183, 100%, 15%);
+    background-color: hsl(172, 67%, 70%) !important;
+    color: hsl(183, 100%, 15%) !important;
+  
 }
 
 .tip-btn.active {
