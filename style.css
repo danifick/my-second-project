@@ -363,7 +363,9 @@ body {
     body {
         display: block !important; 
         min-height: auto !important;
-        padding: 16px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        background-color: #c5e4e7;
     }
 
     .calc__logo {
@@ -388,5 +390,16 @@ body {
        margin-top: 0 !important;
        margin-bottom: 0 !important;
     }
+
+    main.tip__calculator {
+         width: 100% !important;
+         max-width: 100% !important;
+          margin: 0 !important;
+           border-radius: 25px 25px 0 0 !important;
+           box-sizing: border-box !important;
+    }
+
+
+    
 
 }
