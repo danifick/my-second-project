@@ -332,6 +332,7 @@ body {
     .tip__calculator {
         display: flex !important;
         flex-direction: column !important;
+        grid-template-columns: none !important;
         gap: 24px !important;
         padding: 16px 16px 12px 17px !important;
         width: 100% !important;
@@ -343,10 +344,13 @@ body {
 
 
     .calculator__right {
-         min-height: auto !important;
+         display: flex !important; 
+         flex-direction: column !important;
+         justify-content: flex-start !important;
          height: auto !important;
-         padding:16px !important;
-         gap: 16px !important;
+         min-height: auto !important;
+         padding: 24px !important;
+         gap: 32px !important;
          border-radius: 15px !important;
          box-sizing: border-box !important;
     
@@ -365,10 +369,10 @@ body {
     body {
         display: flex !important; 
         flex-direction: column !important;
-        justify-content: flex-start !important;
+        justify-content: center !important;
         align-items: center !important;
         min-height: 100vh !important;
-        padding-top: 16px !important;
+        padding: 16px 0 !important;
         margin: 0 !important;
         background-color: hsl(185, 41%, 84%) !important;
     }
