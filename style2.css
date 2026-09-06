@@ -323,7 +323,7 @@ body {
 }
 
 
-@media (max-width: 430px) {
+@media (max-width: 480px) {
 
     .result__values-block .result__row:first-child {
         margin-bottom: 16px !important; 
